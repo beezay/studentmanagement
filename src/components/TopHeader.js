@@ -18,11 +18,11 @@ const TopHeader = ({url, history}) => {
     setAddStudentForm(val);
   };
 
-  useEffect(() => {
-    if(url !== 'http://localhost:3000/') {
-      setShowReturnBtn(true)
-    }
-  },[url] )
+  // useEffect(() => {
+  //   if(url !== 'http://localhost:3000/') {
+  //     setShowReturnBtn(true)
+  //   }
+  // },[url] )
   return (
     <>
       <h2>WEN Student Info</h2>
