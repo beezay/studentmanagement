@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router";
 import AddStudent from "./AddStudent";
 
-const TopHeader = ({url, history}) => {
+const TopHeader = ({ url, history }) => {
   const [addStudentForm, setAddStudentForm] = useState(false);
 
   const [showReturnBtn, setShowReturnBtn] = useState(false);
@@ -11,30 +11,25 @@ const TopHeader = ({url, history}) => {
     setAddStudentForm(!addStudentForm);
   };
 
-  const handleCloseForm = val => {
+  const handleCloseForm = (val) => {
     if (addStudentForm) {
       val = false;
     }
     setAddStudentForm(val);
   };
 
-  // useEffect(() => {
-  //   if(url !== 'http://localhost:3000/') {
-  //     setShowReturnBtn(true)
-  //   }
-  // },[url] )
   return (
     <>
-      <h2>WEN Student Info</h2>
+      <h2>All Student Info</h2>
       <blockquote className="blockquote">
         Here we have all the list of students with their Details.
-        <small className="text-danger"> WEN Welcomes You!</small>
+        <small className="text-danger">Welcomes You!</small>
       </blockquote>
       {showReturnBtn ? (
         <button
           type="button"
           className="btn btn-outline-warning btn-lg btn-block"
-          onClick={()=> history.push('/')}
+          onClick={() => history.push("/")}
         >
           Return to Home
         </button>
